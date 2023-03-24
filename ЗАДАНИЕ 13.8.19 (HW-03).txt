@@ -1,0 +1,17 @@
+number_of_tickets = int(input("¬ведите количество билетов: "))
+
+total = 0
+
+for i in range(number_of_tickets):
+    age = int(input(f"¬ведите возраст {i + 1}-го посетител€: "))
+    if age < 18:
+        continue
+    elif 18 <= age <= 25:
+        total += 990
+    else:
+        total += 1390
+
+if number_of_tickets > 3:
+    print("—умма к оплате с учeтом скидки 10%: ", total - total / 100 * 10)
+else:
+    print("—умма к оплате:", float(total))
